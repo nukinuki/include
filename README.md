@@ -18,7 +18,7 @@
 ### С помощью Composer
 
 ```
-composer install webprofy/include
+composer require webprofy/include
 ```
 
 ### Вручную
