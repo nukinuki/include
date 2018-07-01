@@ -1,0 +1,42 @@
+.webprofy-include {
+	position: relative;
+	transition: opacity 0.5s linear;
+}
+.webprofy-include.is-disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+.webprofy-include__buttons {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: none;
+}
+.webprofy-include:hover .webprofy-include__buttons {
+	display: block;
+}
+.webprofy-include__edit,
+.webprofy-include__cancel,
+.webprofy-include__save {
+	display: inline-block;
+	padding: 5px 10px;
+	background: #999;
+	color: white;
+	font-size: 11px;
+	margin-left: 1px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.webprofy-include__edit {
+	background-color: #1a75ba;
+}
+.webprofy-include__cancel {
+	background-color: #c61c26;
+}
+.webprofy-include__save {
+	background-color: #88c047;
+}
+.webprofy-include img.medium-editor-dragover {
+	-webkit-filter: blur(5px); /* Safari */
+    filter: blur(5px);
+}
