@@ -86,11 +86,11 @@ class WebprofyInclude extends CBitrixComponent
 
 			Asset::getInstance()->addCss($this->__path."/medium-editor/css/medium-editor.css");
 			Asset::getInstance()->addCss($this->__path."/medium-editor/css/themes/beagle.css");
-			Asset::getInstance()->addCss($this->__path."/style.css");
+			Asset::getInstance()->addCss($this->__path."/_style.css");
 
 			Asset::getInstance()->addJs($this->__path."/medium-editor/js/medium-editor.js");
 			Asset::getInstance()->addJs($this->__path."/medium-editor/js/image-dragging-custom.js");
-			Asset::getInstance()->addJs($this->__path."/script.js");
+			Asset::getInstance()->addJs($this->__path."/_script.js");
 
 			$editor = '&site='.SITE_ID.'&back_url='.urlencode($_SERVER['REQUEST_URI']).'&templateID='.urlencode(SITE_TEMPLATE_ID);
 
