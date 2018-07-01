@@ -1,0 +1,9 @@
+{
+    "name": "webprofy/include",
+    "description": "Editable include area component for bitrix",
+    "type": "bitrix-d7-component",
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+        "composer/installers": "~1.0"
+    }
+}
