@@ -77,12 +77,12 @@ class WebprofyInclude extends CBitrixComponent
 	{
 		global $APPLICATION;
 		$isEditor = $APPLICATION->GetShowIncludeAreas() && $APPLICATION->GetFileAccessPermission($this->arParams['FILE']) >= "W";
-		$id = $this->randString();
+		$id = 'inc_'.$this->randString();
 		$ajaxPath = $this->__path."/ajax.php";
 		$fileName = $this->arParams['FILE'];
 
 		if($isEditor){
-			echo "<div id='inc${id}' class='webprofy-include' data-ajax='${ajaxPath}' data-file='${fileName}'>";
+			echo "<div id='${id}' class='webprofy-include' data-ajax='${ajaxPath}' data-file='${fileName}'>";
 
 			Asset::getInstance()->addCss($this->__path."/medium-editor/css/medium-editor.css");
 			Asset::getInstance()->addCss($this->__path."/medium-editor/css/themes/beagle.css");
