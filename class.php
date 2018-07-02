@@ -61,7 +61,7 @@ class WebprofyInclude extends CBitrixComponent
 				$server_output_file = $_SERVER['DOCUMENT_ROOT'].$output_file;
 
 				// Сохраняем файл
-			    $ifp = fopen($server_output_file, 'wb'); 
+			    $ifp = fopen($server_output_file, 'wb');
 			    fwrite($ifp, base64_decode($parts[2]));
 			    fclose($ifp);
 			    return 'src="'.$output_file.'"';
@@ -82,7 +82,7 @@ class WebprofyInclude extends CBitrixComponent
 		$fileName = $this->arParams['FILE'];
 
 		if($isEditor){
-			echo "<div id='${id}' class='webprofy-include' data-ajax='${ajaxPath}' data-file='${fileName}'>";
+			echo "<div id='inc${id}' class='webprofy-include' data-ajax='${ajaxPath}' data-file='${fileName}'>";
 
 			Asset::getInstance()->addCss($this->__path."/medium-editor/css/medium-editor.css");
 			Asset::getInstance()->addCss($this->__path."/medium-editor/css/themes/beagle.css");
