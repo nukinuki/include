@@ -61,7 +61,7 @@ class WebprofyInclude extends CBitrixComponent
 				$server_output_file = $_SERVER['DOCUMENT_ROOT'].$output_file;
 
 				// Сохраняем файл
-			    $ifp = fopen($server_output_file, 'wb'); 
+			    $ifp = fopen($server_output_file, 'wb');
 			    fwrite($ifp, base64_decode($parts[2]));
 			    fclose($ifp);
 			    return 'src="'.$output_file.'"';
@@ -77,7 +77,7 @@ class WebprofyInclude extends CBitrixComponent
 	{
 		global $APPLICATION;
 		$isEditor = $APPLICATION->GetShowIncludeAreas() && $APPLICATION->GetFileAccessPermission($this->arParams['FILE']) >= "W";
-		$id = $this->randString();
+		$id = 'inc_'.$this->randString();
 		$ajaxPath = $this->__path."/ajax.php";
 		$fileName = $this->arParams['FILE'];
 
